@@ -1,0 +1,87 @@
+<%- include('partiall/header.ejs') %>
+<div id="loading"></div>
+<section id="cart" class="section-p1">
+    <h3>Your Cart</h3>
+    <table width="100%">
+        <thead>
+            <th>Remove</th>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </thead>
+        <tbody>
+           
+           
+          <%  items.forEach((item)=>{ %>
+             <tr>
+                <td><a href="/<%=item._id%>/deleteFromCart" ><i class="fa fa-times-circle"></i></a></td>
+                <td><img src="../images/category/<%=item.category%>/<%=item.images[0]%>.jpg" alt="error"></td>
+                <td><%=item.name%></td>
+                <td class="product-price"><%=item.price%></td>
+            
+                <td class="product-quantity"><input onclick="total()" type="number" name="cartNumber" min="1" value="1" ></td>
+                
+                <td class="product-line-price"><%=item.price%></td>
+            </tr>
+        <%  }) %>
+        </tbody>
+    </table>
+</section>
+
+
+
+<section id="cart-add" class="section-p1">
+    <div id="coupen">
+        <h3>APPLY COUPEN</h3>
+        <div>
+            <input id="coupencode"  type="text" placeholder="ankurtiwari">
+            <button onclick="total()" type="submit" class="btn btn-success">Apply</button>
+        </div>
+    </div>
+    <div id="subtotal">
+        <h3>Cart Total</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td class="totals-value" id="cart-subtotal"></td>
+            </tr> 
+            <tr>
+                <td>Tax (18%)</td>
+                <td class="totals-value" id="cart-tax"></td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td class="totals-value" id="cart-shipping">FREE</td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td class="totals-value" id="cart-discount">0.00</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong class="totals-value" id="cart-total"></strong></td>
+            </tr>
+        </table>
+        <button class="btn btn-success">Proceed to checkout</button>
+    </div>
+</section>
+
+<section id="newsletter" class="section-p1 section-m1" >
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your Email Address">
+        <button class="btn btn-success success">Sign Up</button>
+    </div>
+</section>
+<script>
+   
+        window.onload = function () {
+        document.getElementById("loading").remove()
+}
+</script>
+<%- include('partiall/footer.ejs') %>

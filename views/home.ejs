@@ -1,0 +1,272 @@
+<%- include('partiall/header.ejs') %>
+<div id="loading"></div>
+    <section id="hero">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/hero4.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/hero3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/hero2.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="car-text">
+        <h4>Trade-in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupens & up to 70% off</p>
+        <button class="btn btn-primary">Shop Now</button>
+        </div>
+    </section>
+
+  
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f2.png" alt="">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f5.png" alt="">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img loading="lazy" src="images/features/f6.png" alt="">
+            <h6>24/7 support</h6>
+        </div>
+    </section>
+
+   
+
+
+    <section id="category" class="section-p1">
+        <h2>Our category</h2>
+        <div class="cat-container">
+            <div  onclick="window.location.href = '/Tshirt';" class="cat">
+                 <img loading="lazy" src="images/category/tshirt.jpg" alt="">
+                <div class="description">
+                    <h5>T Shirt</h5>
+                    <h4>399-999</h4>
+                </div>
+               <a href="/tshirt" target="_blank"> <i class="fa-sharp fa-solid fa-arrow-right arrow"></i> </a>
+            </div>
+        
+            <div onclick="location.href='/Shoe'"  class="cat">
+                <img src="images/category/shoe.jpg" alt="">
+                <div class="description">
+                    <h5>Shoes</h5>
+                    <h4>799-2999</h4>
+                </div>
+                <i class="fa-sharp fa-solid fa-arrow-right arrow"></i>
+            </div>
+            <div onclick="location.href='/Shirt'"  class="cat">
+                <img loading="lazy" src="images/category/shirt/img111.jpg" alt="">
+                <div class="description">
+                    <h5>Shirt</h5>
+                    <h4>499-1599</h4>
+                </div>
+                <i class="fa-sharp fa-solid fa-arrow-right arrow"></i>
+            </div>
+            <div onclick="location.href='/Headphone'"  class="cat">
+                <img loading="lazy" src="images/category/headphone2.jpg" alt="">
+                <div class="description">
+                    <h5>Headphones</h5>
+                    <h4>1799-4999</h4>
+                </div>
+                <i class="fa-sharp fa-solid fa-arrow-right arrow"></i>
+            </div>
+            <div onclick="location.href='/Smart-Watch'"  class="cat">
+                <img loading="lazy" src="images/category/watch.jpg" alt="">
+                <div class="description">
+                    <h5>Smart watches</h5>
+                    <h4>1799-3999</h4>
+                </div>
+                <i class="fa-sharp fa-solid fa-arrow-right arrow"></i>
+            </div>
+            <div onclick="location.href='/Earbud'"  class="cat">
+                <img loading="lazy" src="images/category/earbud.jpg" alt="">
+                <div class="description">
+                    <h5>Earbuds</h5>
+                    <h4>999-3999</h4>
+                </div>
+                <i class="fa-sharp fa-solid fa-arrow-right arrow"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Product</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div  class="pro-container">
+            <div onclick="location.href='/<%=Product[0].category%>/<%=Product[0].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[0].category%>/<%=Product[0].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[0].category%></span>
+                    <h5><%=Product[0].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[0].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[0].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[1].category%>/<%=Product[1].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[1].category%>/<%=Product[1].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[1].category%></span>
+                    <h5><%=Product[1].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[1].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[1].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[4].category%>/<%=Product[4].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[4].category%>/<%=Product[4].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[4].category%></span>
+                    <h5><%=Product[4].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[4].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[4].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[5].category%>/<%=Product[5].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[5].category%>/<%=Product[5].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[5].category%></span>
+                    <h5><%=Product[5].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[5].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[5].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[8].category%>/<%=Product[8].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[8].category%>/<%=Product[8].images[0]%>.jpg" alt="">
+
+                <div class="description">
+                    <span><%=Product[8].category%></span>
+                    <h5><%=Product[8].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4><%=Product[8].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[8].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[9].category%>/<%=Product[9].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[9].category%>/<%=Product[9].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[9].category%></span>
+                    <h5><%=Product[9].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[9].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[9].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[12].category%>/<%=Product[12].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[12].category%>/<%=Product[12].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[12].category%></span>
+                    <h5><%=Product[12].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[12].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[12].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+            <div onclick="location.href='/<%=Product[13].category%>/<%=Product[13].id%>'" class="pro">
+                <img loading="lazy" src="../images/category/<%=Product[13].category%>/<%=Product[13].images[0]%>.jpg" alt="">
+                <div class="description">
+                    <span><%=Product[13].category%></span>
+                    <h5><%=Product[13].name%></h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$<%=Product[13].price%></h4>
+                </div>
+                <a href="/shop/<%=Product[13].id%>/addToCart"><i class="fa-solid fa-cart-shopping cart"> </i></a>
+            </div>
+        </div>
+    </section>
+    
+
+  
+    <section id="newsletter" class="section-p1 section-m1" >
+        <div class="newstext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="btn btn-success success">Sign Up</button>
+        </div>
+    </section>
+    <script>
+        window.onload = function () {
+  document.getElementById("loading").remove()
+//   document.querySelector(".content").removeAttribute("hidden")
+}
+    </script>
+    <%- include('partiall/footer.ejs') %>

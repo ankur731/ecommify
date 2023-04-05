@@ -1,0 +1,79 @@
+<%- include('partiall/header.ejs') %>
+
+<div id="loading"></div>
+<section id="category" class="section-p1">
+    <h2>Our <%= category%> Collection</h2>
+    <p>All Collection with New Morden Design</p>
+    <div class="cat-container">
+        
+    <%    products.forEach((product)=>{ %>
+       
+       
+        <div onclick="location.href='/<%=cat%>/<%=product.id%>'" class="cat">
+            <img src="images/category/<%=cat%>/<%=product.images[0]%>.jpg" alt="">
+            <div class="description">
+                <h5><%=product.name%></h5>
+                <div class="star"> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    
+                </div>
+                <h4> <%=product.price%></h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart arrow"> </i></a>
+        </div>
+        <div onclick="location.href='/<%=cat%>/<%=product.id%>'" class="cat">
+            <img src="images/category/<%=cat%>/<%=product.images[1]%>.jpg" alt="">
+            <div class="description">
+                <h5><%=product.name%></h5>
+                <div class="star"> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    
+                </div>
+                <h4> <%=product.price%></h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart arrow"> </i></a>
+        </div>
+        <div onclick="location.href='/<%=cat%>/<%=product.id%>'" class="cat">
+            <img src="images/category/<%=cat%>/<%=product.images[2]%>.jpg" alt="">
+            <div class="description">
+                <h5><%=product.name%></h5>
+                <div class="star"> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    
+                </div>
+                <h4> <%=product.price%></h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart arrow"> </i></a>
+        </div>
+       
+       
+        
+    <%})%>
+    </div>
+</section>
+    
+
+  
+<section id="newsletter" class="section-p1 section-m1" >
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your Email Address">
+        <button class="btn btn-success success">Sign Up</button>
+    </div>
+</section>
+<script>
+       window.onload = function () {
+  document.getElementById("loading").remove()
+//   document.querySelector(".content").removeAttribute("hidden")
+}
+</script>
+    <%- include('partiall/footer.ejs') %>
