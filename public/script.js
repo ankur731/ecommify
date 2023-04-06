@@ -13,6 +13,8 @@ if(close){
     })
 }
 
+
+
 var taxRate = 0.05;
 var shippingRate = 15.00; 
 var fadeTime = 300;
@@ -30,11 +32,26 @@ $('.product-removal button').click( function() {
 function code(){
 var code = document.getElementById('coupencode').value;
 if(code=='ankurtiwari'){
+  swal("Coupen applied successfully !!");
   return 10;
+}
+else if(code!='ankurtiwari' && code!=''){
+  swal("Invalid Coupen Code !!");
+  return 0;
 }
 else{
   return 0;
 }
+}
+
+
+function order(){
+  swal({
+title: "Success",
+text: "You order has been successfully placed !",
+icon: "success",
+button: "Continue Shopping",
+});
 }
 
 /* Recalculate cart */
@@ -48,9 +65,7 @@ function recalculateCart()
   });
 
 }
-function temptotal(){
- 
-}
+
 function total(){
 setTimeout(function() { 
   var itemPrice=document.querySelectorAll('.product-line-price');
@@ -104,4 +119,9 @@ window.onload = function () {
   total();
   document.getElementById("loading").remove()
 //   document.querySelector(".content").removeAttribute("hidden")
+}
+
+
+function newsletter(){
+  swal("Subscribed to newletter");
 }

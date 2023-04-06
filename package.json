@@ -15,7 +15,8 @@
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.2",
     "mongoose-findorcreate": "^4.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "sweetalert": "^2.1.2"
   },
   "description": ""
 }

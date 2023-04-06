@@ -102,6 +102,19 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
+const visitorSchema = new mongoose.Schema({
+    _id:{
+        type: mongoose.Schema.Types.ObjectId,
+        index: true,
+        required: true,
+        auto: true,
+    },
+    email:{
+        type:String
+    }
+})
+
+const Visitor = mongoose.model("Visitor", visitorSchema);
 
 app.get("/", function(req, res){
     
@@ -113,6 +126,18 @@ app.get("/", function(req, res){
         console.log(err);
     })
 })
+
+
+app.get("/newsletter", function(req, res){
+    res.redirect("/");
+})
+
+app.post("/newsletter", function(req, res){
+    const visitor1 = new Visitor({email:req.body.visitorEmail});
+    visitor1.save();
+    res.redirect("/");
+})
+
 app.get("/shop", function(req, res){
      Product.find({})
      .then(function(foundProducts){  

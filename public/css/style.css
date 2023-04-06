@@ -325,6 +325,11 @@ footer .col{
 footer .logo{
     margin-bottom: 30px;
 }
+img.logo{
+    width: 14vw;
+    min-width: 90px;
+    max-width: 120px;
+}
 footer h4{
     font-size: 14px;
     padding-bottom: 20px;
@@ -492,6 +497,8 @@ footer .copywrite{
     overflow-x: hidden;
     
 }
+
+
 
 
 /* all */

@@ -147,16 +147,18 @@
    
 
 
-<section id="newsletter" class="section-p1 section-m1" >
-    <div class="newstext">
-        <h4>Sign Up For Newsletters</h4>
-        <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
-    </div>
-    <div class="form">
-        <input type="text" placeholder="Your Email Address">
-        <button class="btn btn-success success">Sign Up</button>
-    </div>
-</section>
+    <form action="/newsletter" method="post">
+        <section id="newsletter" class="section-p1 section-m1" >
+            <div class="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span> special offers.</span></p>
+            </div>
+            <div class="form">
+                <input type="email" name="visitorEmail" placeholder="Your Email Address">
+                <button  class="btn btn-success success" onclick="newsletter()" type="submit">Sign up</button>
+            </div>
+        </section>
+        </form>
 <footer class="section-p1">
     <div class="col">
         <img loading="lazy" class="logo" src="../images/logo.png" alt="">
